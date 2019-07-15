@@ -7,7 +7,7 @@
 >> Abrir solução, definir o projeto EmployeesManager.Web como Set as StartUp Project.
 >> Alterar ConnectionStrings string no arquivo EmployeesManager.Web/appsettings.json.
 >> No console do gerenciador Nuget executar o comando Update-Database no projeto EmployeesManager.Repository.
->> Da start no projeto (F5)
+>> Dar start no projeto (F5)
 
 **Terminal**:
 
