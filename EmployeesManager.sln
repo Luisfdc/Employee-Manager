@@ -9,9 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeesManager.Repository
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeesManager.Web", "EmployeesManager.Web\EmployeesManager.Web.csproj", "{DF454598-8DCC-4799-9C8F-E39A77451DC9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeesManager", "EmployeesManager\EmployeesManager.csproj", "{258FDE08-2B15-4C09-BDDE-54261C1D5B48}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EmployeesManager.Tests", "EmployeesManager.Tests", "{9602A5E3-1752-498A-9ADF-388EFAF891F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeesManager", "EmployeesManager\EmployeesManager.csproj", "{258FDE08-2B15-4C09-BDDE-54261C1D5B48}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
