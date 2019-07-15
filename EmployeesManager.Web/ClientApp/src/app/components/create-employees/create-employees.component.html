@@ -1,0 +1,33 @@
+<div class="box box-primary">
+  <div class="box-header with-border">
+    <h3 class="box-title">Novo Funcionário</h3>
+  </div>
+  <!-- /.box-header -->
+  <form #userForm="ngForm">
+    <div class="box-body">
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" class="form-control" id="nome" required #name="ngModel" name="name" [(ngModel)]="user.name" placeholder="Nome">
+        <div [hidden]="name.valid || name.pristine" class="alert alert-danger"> O Nome é Obrigatório </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" required #email="ngModel" name="email" placeholder="E-mail" [(ngModel)]="user.email">
+        <div [hidden]="email.valid || email.pristine" class="alert alert-danger"> O Email é Obrigatório </div>
+      </div>
+      <div class="form-group">
+        <label>Departamento</label>
+        <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true" [(ngModel)]="user.departmentId" required #departmentId="ngModel" name="departmentId">
+          <option value="" disabled selected hidden>Selecionar</option>
+          <option *ngFor="let department of departments" [value]="department.id">{{department.name}}</option>
+        </select>
+        <div [hidden]="departmentId.valid || departmentId.pristine" class="alert alert-danger"> O Departamento é Obrigatório </div>
+      </div>
+    </div>
+  </form>
+
+    <div class="box-footer">
+      <button type="submit" (click)="salvar(user)" [disabled]="name.invalid || email.invalid || departmentId.invalid" class="btn btn-primary">Salvar</button>
+    </div>
+
+</div>
