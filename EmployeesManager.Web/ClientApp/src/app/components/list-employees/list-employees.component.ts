@@ -11,7 +11,7 @@ export class ListEmployeesComponent implements OnInit {
   @ViewChild('dataTable', { static: false }) table;
   dataTable: any;
   private _employeeService: EmployeeService;
-  private employees: Employee[];
+  employees: Employee[];
 
   constructor(employeeService: EmployeeService) {
     this._employeeService = employeeService;
