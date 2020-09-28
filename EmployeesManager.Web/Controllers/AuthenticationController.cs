@@ -13,7 +13,7 @@ namespace EmployeesManager.Controllers
     {
         [HttpGet("[action]")]
         public object GetUser() {
-            return new { Nome = User.Identity.Name.Split('\\')[1].ToUpper() };
+            return new { Nome = User.Identity.Name?.Split('\\')[1].ToUpper() };
         }
     }
 }

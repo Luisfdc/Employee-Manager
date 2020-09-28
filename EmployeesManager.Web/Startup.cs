@@ -25,13 +25,15 @@ namespace EmployeesManager
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+
+
 
             services.AddScoped<IEmployeesAplication, EmployeesAplication>();
             services.AddScoped<IEmployeesRepository, EmployeesRepository>();
@@ -49,8 +51,10 @@ namespace EmployeesManager
             }
             else
             {
-                app.UseExceptionHandler("/Error");
-                app.UseHsts();
+                //app.UseExceptionHandler("/Error");
+                //app.UseHsts();
+
+                app.UseDeveloperExceptionPage();
             }
 
             app.UseHttpsRedirection();
